@@ -531,6 +531,21 @@ body {
   opacity: 1;
 }
 
+/* ── 동의 미체크 알럿 ── */
+.consent-alert {
+  background: #fff3f3;
+  border: 1px solid #ffcdd2;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #e53935;
+  text-align: center;
+  transition: opacity 0.2s;
+}
+.consent-alert.hidden {
+  display: none;
+}
+
 /* ── 개인정보 약관 드롭다운 (팝업 내부 inline) ── */
 .policy-dropdown {
   overflow: hidden;
