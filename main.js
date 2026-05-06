@@ -6,12 +6,12 @@ document.querySelectorAll('.index-item').forEach(item => {
 });
 
 const popup = document.getElementById('address-popup');
-const btnNew = document.getElementById('btn-new-address');
-const btnExisting = document.getElementById('btn-existing-address');
 
 function closePopup() {
   popup.classList.add('hidden');
 }
 
-if (btnNew) btnNew.addEventListener('click', closePopup);
-if (btnExisting) btnExisting.addEventListener('click', closePopup);
+['btn-new-address', 'btn-existing-address', 'btn-close-popup'].forEach(id => {
+  const el = document.getElementById(id);
+  if (el) el.addEventListener('click', closePopup);
+});

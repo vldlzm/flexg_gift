@@ -114,6 +114,7 @@
             <!-- 팝업 오버레이 -->
             <div class="popup-overlay" id="address-popup">
               <div class="popup-sheet">
+                <button class="popup-close" id="btn-close-popup">✕</button>
                 <p class="popup-title">이전 배송지로 받으시겠습니까?</p>
                 <p class="popup-desc">회원님께서 이전에 수령하신 배송지가<br>있습니다.</p>
                 <div class="address-box">
@@ -160,8 +161,8 @@
         <div class="desc-section">
           <p class="desc-label">팝업</p>
           <ul class="desc-list">
-            <li><b>노출 조건</b><br>로그인 회원 중 이전 선물 수령 이력이 존재하는 경우에만 노출</li>
-            <li><b>노출 정보</b><br>직전 수령 건의 수령인명, 연락처, 배송지 주소를 표시</li>
+            <li><b>노출 조건</b><br>로그인 회원 중 이전 선물 수령 이력이 존재하는 경우에만 노출. 비회원의 경우 해당 팝업 호출되지 않음</li>
+            <li><b>노출 정보</b><br>직전 수령 건의 수령인명, 연락처, 배송지 주소를 표시. 이전 수령 이력이 여러 건인 경우 직전 1건 기준으로 표시</li>
             <li><b>새로운 배송지 선택</b><br>팝업 닫힘 처리. 사용자가 직접 배송지를 입력할 수 있는 상태로 전환</li>
             <li><b>이전 배송지로 받기</b><br>표시된 이전 배송지 정보로 다음 단계로 진행</li>
           </ul>

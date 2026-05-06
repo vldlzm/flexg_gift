@@ -320,7 +320,22 @@ body {
   flex-direction: column;
   gap: 12px;
   animation: slideUp 0.3s cubic-bezier(0.32, 0.72, 0, 1);
+  position: relative;
 }
+
+.popup-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: #aaa;
+  cursor: pointer;
+  line-height: 1;
+  padding: 4px;
+}
+.popup-close:hover { color: #555; }
 @keyframes slideUp {
   from { transform: translateY(100%); }
   to   { transform: translateY(0); }
