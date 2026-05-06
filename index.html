@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>플렉스지 선물하기</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="layout">
+
+    <!-- 왼쪽: 인덱스 -->
+    <nav class="panel panel-index">
+      <h2 class="panel-title">인덱스</h2>
+      <ul class="index-list">
+        <li class="index-item active" data-target="default-address">
+          기본 배송지 불러오기
+        </li>
+      </ul>
+    </nav>
+
+    <!-- 중앙: 메인 화면 -->
+    <main class="panel panel-main">
+      <div class="screen" id="default-address">
+        <h1 class="screen-title">기본 배송지 불러오기</h1>
+        <div class="screen-content">
+          <!-- 화면 콘텐츠 -->
+        </div>
+      </div>
+    </main>
+
+    <!-- 오른쪽: 화면 설명 -->
+    <aside class="panel panel-desc">
+      <h2 class="panel-title">화면 설명</h2>
+      <div class="desc-content">
+        <!-- 설명 콘텐츠 -->
+      </div>
+    </aside>
+
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
