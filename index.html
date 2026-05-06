@@ -13,18 +13,121 @@
     <nav class="panel panel-index">
       <h2 class="panel-title">인덱스</h2>
       <ul class="index-list">
-        <li class="index-item active" data-target="default-address">
-          기본 배송지 불러오기
+        <li class="index-item active" data-target="gift-view">
+          선물보기 화면
         </li>
       </ul>
     </nav>
 
     <!-- 중앙: 메인 화면 -->
     <main class="panel panel-main">
-      <div class="screen" id="default-address">
-        <h1 class="screen-title">기본 배송지 불러오기</h1>
+      <div class="screen" id="gift-view">
+        <h1 class="screen-title">선물보기 — 기본 배송지 불러오기</h1>
         <div class="screen-content">
-          <!-- 화면 콘텐츠 -->
+
+          <!-- 모바일 프레임 -->
+          <div class="mobile-frame">
+
+            <!-- 상태바 -->
+            <div class="mobile-statusbar">
+              <span class="status-time">9:41</span>
+              <div class="status-icons">
+                <svg width="16" height="12" viewBox="0 0 16 12" fill="none">
+                  <rect x="0" y="3" width="3" height="9" rx="1" fill="#333"/>
+                  <rect x="4.5" y="2" width="3" height="10" rx="1" fill="#333"/>
+                  <rect x="9" y="0" width="3" height="12" rx="1" fill="#333"/>
+                  <rect x="13.5" y="0" width="2.5" height="12" rx="1" fill="#ccc"/>
+                </svg>
+                <svg width="16" height="12" viewBox="0 0 16 12" fill="none">
+                  <path d="M8 3C10.2 3 12.2 3.9 13.6 5.4L15 4C13.2 2.1 10.7 1 8 1C5.3 1 2.8 2.1 1 4L2.4 5.4C3.8 3.9 5.8 3 8 3Z" fill="#333"/>
+                  <path d="M8 6C9.4 6 10.6 6.6 11.5 7.5L12.9 6.1C11.6 4.8 9.9 4 8 4C6.1 4 4.4 4.8 3.1 6.1L4.5 7.5C5.4 6.6 6.6 6 8 6Z" fill="#333"/>
+                  <circle cx="8" cy="10" r="1.5" fill="#333"/>
+                </svg>
+                <svg width="25" height="12" viewBox="0 0 25 12" fill="none">
+                  <rect x="0.5" y="0.5" width="21" height="11" rx="3.5" stroke="#333" stroke-opacity="0.35"/>
+                  <rect x="2" y="2" width="17" height="8" rx="2" fill="#333"/>
+                  <path d="M23 4.5V7.5C23.8 7.2 24.5 6.4 24.5 6C24.5 5.6 23.8 4.8 23 4.5Z" fill="#333" fill-opacity="0.4"/>
+                </svg>
+              </div>
+            </div>
+
+            <!-- 헤더 -->
+            <div class="mobile-header">
+              <button class="btn-back">
+                <svg width="10" height="18" viewBox="0 0 10 18" fill="none">
+                  <path d="M9 1L1 9L9 17" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <span class="header-title">선물보기</span>
+              <div class="header-right"></div>
+            </div>
+
+            <!-- 스크롤 콘텐츠 -->
+            <div class="mobile-scroll">
+
+              <!-- 도착 메시지 -->
+              <div class="gift-arrived">
+                <p class="gift-arrived-title">선물이 도착했어요!</p>
+                <p class="gift-arrived-sub">#&#123;주문자&#125;님이 당신을 위해 선물을 준비했어요.</p>
+              </div>
+
+              <!-- 콩그래츠 카드 -->
+              <div class="congrats-card">
+                <div class="confetti">
+                  <span class="dot" style="--x:10%;--y:18%;--c:#FFD600;--s:10px"></span>
+                  <span class="dot" style="--x:22%;--y:10%;--c:#FF6B6B;--s:8px"></span>
+                  <span class="dot" style="--x:38%;--y:8%;--c:#4FC3F7;--s:7px"></span>
+                  <span class="dot" style="--x:60%;--y:6%;--c:#AED581;--s:9px"></span>
+                  <span class="dot" style="--x:75%;--y:12%;--c:#FF6B6B;--s:6px"></span>
+                  <span class="dot" style="--x:88%;--y:20%;--c:#FFD600;--s:11px"></span>
+                  <span class="dot" style="--x:90%;--y:42%;--c:#CE93D8;--s:7px"></span>
+                  <span class="dot" style="--x:5%;--y:55%;--c:#4FC3F7;--s:8px"></span>
+                  <span class="dot rect" style="--x:15%;--y:70%;--c:#FF6B6B;--s:7px"></span>
+                  <span class="dot rect" style="--x:82%;--y:65%;--c:#AED581;--s:9px"></span>
+                  <span class="dot" style="--x:70%;--y:78%;--c:#FFD600;--s:6px"></span>
+                  <span class="dot rect" style="--x:48%;--y:82%;--c:#CE93D8;--s:8px"></span>
+                </div>
+                <div class="congrats-cake">
+                  <div class="sparkle">✦</div>
+                  <div class="cake-emoji">🎂</div>
+                </div>
+                <div class="congrats-text">CONGRATS</div>
+              </div>
+
+              <!-- 선물 정보 -->
+              <div class="gift-info-wrap">
+                <p class="gift-info-label">선물 정보</p>
+                <div class="gift-product">
+                  <div class="product-thumb">
+                    <div class="product-thumb-inner">🧴</div>
+                  </div>
+                  <div class="product-detail">
+                    <p class="product-name">LONDON GIFT SPEC VAVA SOLUY 88 MP4/GIF</p>
+                    <p class="product-meta">· 상품구성 : 튜브타입 (+샘플증정)</p>
+                    <p class="product-meta">· 주문수량 : 1개</p>
+                  </div>
+                </div>
+              </div>
+
+            </div><!-- /mobile-scroll -->
+
+            <!-- 팝업 오버레이 -->
+            <div class="popup-overlay" id="address-popup">
+              <div class="popup-sheet">
+                <p class="popup-title">기존 배송지로 받으시겠습니까?</p>
+                <p class="popup-desc">회원님께서 이전에 등록하신 배송지가<br>있습니다.</p>
+                <div class="address-box">
+                  <p class="address-name">홍길동 &nbsp;&nbsp; 010-1234-5678</p>
+                  <p class="address-detail">서울시 성동구 아차산로 123, 101동 1004호</p>
+                </div>
+                <div class="popup-buttons">
+                  <button class="popup-btn btn-secondary" id="btn-new-address">새로운 배송지 선택</button>
+                  <button class="popup-btn btn-primary" id="btn-existing-address">기존 배송지로 받기</button>
+                </div>
+              </div>
+            </div>
+
+          </div><!-- /mobile-frame -->
         </div>
       </div>
     </main>
@@ -33,7 +136,42 @@
     <aside class="panel panel-desc">
       <h2 class="panel-title">화면 설명</h2>
       <div class="desc-content">
-        <!-- 설명 콘텐츠 -->
+
+        <div class="desc-section">
+          <p class="desc-label">화면명</p>
+          <p>선물보기</p>
+        </div>
+
+        <div class="desc-section">
+          <p class="desc-label">진입 경로</p>
+          <p>선물 알림톡 클릭 → 화면 호출</p>
+        </div>
+
+        <div class="desc-section">
+          <p class="desc-label">화면 구성</p>
+          <ul class="desc-list">
+            <li>선물 도착 안내 메시지</li>
+            <li>콩그래츠 이미지 카드</li>
+            <li>선물 상품 정보</li>
+          </ul>
+        </div>
+
+        <div class="desc-section">
+          <p class="desc-label">팝업</p>
+          <p>기존 등록 배송지가 있는 회원에게 노출</p>
+          <ul class="desc-list">
+            <li><b>새로운 배송지 선택</b><br>배송지 입력 화면으로 이동</li>
+            <li><b>기존 배송지로 받기</b><br>기존 배송지로 주문 확정</li>
+          </ul>
+        </div>
+
+        <div class="desc-section">
+          <p class="desc-label">변수</p>
+          <ul class="desc-list">
+            <li><code>#&#123;주문자&#125;</code> — 선물 발신자 이름</li>
+          </ul>
+        </div>
+
       </div>
     </aside>
 
