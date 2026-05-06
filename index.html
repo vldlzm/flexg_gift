@@ -113,6 +113,8 @@
 
             <!-- 팝업 오버레이 -->
             <div class="popup-overlay" id="address-popup">
+
+              <!-- 메인 팝업 시트 -->
               <div class="popup-sheet">
                 <button class="popup-close" id="btn-close-popup">✕</button>
                 <p class="popup-title">이전 배송지로 받으시겠습니까?</p>
@@ -121,11 +123,39 @@
                   <p class="address-name">홍길동 &nbsp;&nbsp; 010-1234-5678</p>
                   <p class="address-detail">서울시 성동구 아차산로 123, 101동 1004호</p>
                 </div>
+
+                <!-- 개인정보 동의 행 -->
+                <div class="consent-row">
+                  <span class="consent-left">
+                    <span class="consent-required">필수_</span>
+                    <span class="consent-label-text"> 개인정보 수집 및 이용 안내</span>
+                    <button class="consent-view-btn" id="btn-view-policy">보기</button>
+                  </span>
+                  <label class="consent-check-label" for="consent-checkbox">
+                    <span class="consent-check-text">동의</span>
+                    <input type="checkbox" id="consent-checkbox" />
+                    <span class="consent-check-box" id="consent-check-box"></span>
+                  </label>
+                </div>
+
                 <div class="popup-buttons">
                   <button class="popup-btn btn-secondary" id="btn-new-address">새로운 배송지 선택</button>
                   <button class="popup-btn btn-primary" id="btn-existing-address">이전 배송지로 받기</button>
                 </div>
               </div>
+
+              <!-- 개인정보 약관 패널 (보기 클릭 시 노출) -->
+              <div class="policy-panel hidden" id="policy-panel">
+                <div class="policy-body">
+                  <p>1. 개인정보 수집 및 이용 목적 : 선물 수령 및 상담, 교환·반품 및 리콜 안내</p>
+                  <p>2. 개인정보 수집 항목 : 이름, 연락처, 배송지 주소</p>
+                  <p>3. 개인정보의 보유 및 이용 기간 : 전자상거래법에 의해 5년 보관 후 파기</p>
+                  <p class="policy-agree-text">본인은 만 14세 이상 이며 개인정보 수집 및 이용 안내를 확인하였으며, 수집에 동의합니다.</p>
+                  <p class="policy-refuse-text">위 정보 수집에 대한 동의를 거부할 권리가 있으며,<br>동의 거부 시에는 선물수령 등 서비스가 제한될 수 있습니다.</p>
+                </div>
+                <button class="btn-agree-policy" id="btn-agree-policy">내용을 읽고 동의합니다.</button>
+              </div>
+
             </div>
 
           </div><!-- /mobile-frame -->
