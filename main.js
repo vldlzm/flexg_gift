@@ -18,13 +18,13 @@ function closePopup() {
   if (el) el.addEventListener('click', closePopup);
 });
 
-// 보기 클릭 → 약관 패널 노출
+// 보기 클릭 → 드롭다운 토글
 document.getElementById('btn-view-policy').addEventListener('click', () => {
-  policyPanel.classList.remove('hidden');
+  policyPanel.classList.toggle('open');
 });
 
-// 내용을 읽고 동의합니다 클릭 → 체크 후 약관 패널 닫기
+// 내용을 읽고 동의합니다 클릭 → 체크 후 드롭다운 닫기
 document.getElementById('btn-agree-policy').addEventListener('click', () => {
   checkbox.checked = true;
-  policyPanel.classList.add('hidden');
+  policyPanel.classList.remove('open');
 });

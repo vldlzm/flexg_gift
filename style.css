@@ -531,53 +531,53 @@ body {
   opacity: 1;
 }
 
-/* ── 개인정보 약관 패널 ── */
-.policy-panel {
-  width: 100%;
-  background: #fff;
-  border-radius: 20px 20px 0 0;
-  display: flex;
-  flex-direction: column;
-  animation: slideUp 0.25s cubic-bezier(0.32, 0.72, 0, 1);
+/* ── 개인정보 약관 드롭다운 (팝업 내부 inline) ── */
+.policy-dropdown {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+  background: #f8f8f8;
+  border-radius: 10px;
 }
-.policy-panel.hidden {
-  display: none;
+.policy-dropdown.open {
+  max-height: 400px;
+  opacity: 1;
 }
 
 .policy-body {
-  padding: 28px 20px 20px;
+  padding: 14px 14px 10px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  overflow-y: auto;
+  gap: 10px;
 }
 .policy-body p {
-  font-size: 13px;
-  color: #333;
+  font-size: 12px;
+  color: #444;
   line-height: 1.7;
 }
 .policy-agree-text {
-  margin-top: 8px;
+  margin-top: 4px;
   color: #222 !important;
-  font-weight: 500;
+  font-weight: 600;
 }
 .policy-refuse-text {
-  color: #666 !important;
+  color: #777 !important;
 }
 
 .btn-agree-policy {
-  margin: 8px 16px 28px;
-  height: 52px;
+  width: 100%;
+  height: 44px;
   background: #FF4081;
   color: #fff;
   border: none;
-  border-radius: 26px;
-  font-size: 16px;
+  border-radius: 22px;
+  font-size: 14px;
   font-weight: 700;
   cursor: pointer;
   font-family: inherit;
   transition: filter 0.15s;
-  flex-shrink: 0;
+  margin-top: 4px;
 }
 .btn-agree-policy:active { filter: brightness(0.92); }
 
